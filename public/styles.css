@@ -1,0 +1,14 @@
+h1 {
+    color: red;
+}
+
+h2{
+    color: green;
+}
+
+.wrapper{
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
