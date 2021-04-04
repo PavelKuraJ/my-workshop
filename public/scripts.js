@@ -29,7 +29,23 @@ const config ={
     },
 }
 
+// функция, которая будет вызывать наше меню
+function menuPage() {
+    application.innerHTML = '';
 
+    Object.keys(config).map((menuKey) => {
+        const {href, text} = config[menuKey];
+    
+        const menuItem = document.createElement('a');
+        menuItem.href = href;     
+        menuItem.textContent = text;
+        menuItem.dataset.section = menuKey;     // 
+    
+        return menuItem;
+    }).forEach((element) => {
+        application.appendChild(element);
+    });
+}
 
 /* maybe, later
 
