@@ -80,8 +80,9 @@ app.listen(port, function () {
 });
 
 
-/* server, old part
 
+/*
+//server, old part
 const fs = require('fs');
 const http = require ('http'); 
 const debug = require('debug')('http')
@@ -113,5 +114,4 @@ const server = http.createServer((req, res) => {
     debug('after read file')
 });
 
-server.listen(3001);
-*/
+server.listen(3001);   */
