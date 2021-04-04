@@ -29,7 +29,7 @@ const config ={
     },
 }
 
-// функция, которая будет вызывать наше меню
+// функция, вызывающее меню
 function menuPage() {
     application.innerHTML = '';
 
@@ -46,6 +46,30 @@ function menuPage() {
         application.appendChild(element);
     });
 }
+
+// функци, которая делает запрос от сервера
+// ajax - Asynchronous Javascript and XML
+function ajax(method, url, body = null, callback) {
+    const xhr = new XMLHttpRequest();
+    xhr.open(method, url, true);
+    xhr.withCredentials = true;
+
+    xhr.addEventListener('readystatechange', function() {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+
+        callback(xhr.status, xhr.responseText);
+    });
+
+    if (body) {
+        xhr.setRequestHeader('Content-type', 'application/json; charset=utf8');
+        xhr.send(JSON.stringify(body));
+        return;
+    }
+
+    xhr.send();
+}
+
+
 
 /* maybe, later
 
