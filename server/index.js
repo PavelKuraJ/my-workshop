@@ -1,4 +1,4 @@
-//server, new part
+//new server
 'use strict';
 
 const express = require('express');
@@ -16,6 +16,15 @@ app.use(cookie());
 
 const users = {
   // will be users here
+  'p.kuryzhov@corp.mail.ru': {
+    email: 'p.kuryzhov@corp.mail.ru',
+    password: 'password',
+    age: 23,
+    score: 2500,
+    images: [
+      'https://scontent-arn2-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c251.0.778.778a/s640x640/140853636_411698430119641_4125413062374448063_n.jpg?tp=1&_nc_ht=scontent-arn2-1.cdninstagram.com&_nc_cat=101&_nc_ohc=O-0DpVd4DeoAX9BqpEn&edm=APU89FAAAAAA&ccb=7-4&oh=cf13d525c1b37824029a0e6977495ffc&oe=609BC914&_nc_sid=86f79a',
+    ]
+  },
 };
 const ids = {};
 
@@ -82,7 +91,7 @@ app.listen(port, function () {
 
 
 /*
-//server, old part
+//old server
 const fs = require('fs');
 const http = require ('http'); 
 const debug = require('debug')('http')
