@@ -224,6 +224,8 @@ application.addEventListener('click', (evt) => {
 menuPage();
 
 
+
+
 /* maybe, later
 
 const button = document.querySelector('#button');
